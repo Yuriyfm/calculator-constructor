@@ -1,0 +1,27 @@
+@import "../../../App";
+
+.equal-container {
+  @include constructor-block(72, center);
+}
+
+.equal-button {
+  @include button(232, 64);
+  background: #5d5fef;
+}
+
+.equal-button-active {
+  @include button(232, 64);
+  background: #5d5fef;
+  cursor: pointer;
+
+  &:active {
+    border: solid 1px #5d5fef;
+  }
+}
+
+.equal-button-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+}

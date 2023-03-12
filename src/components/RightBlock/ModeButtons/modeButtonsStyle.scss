@@ -1,0 +1,43 @@
+@mixin mode-button($button-width) {
+  width: $button-width + px;
+  height: 36px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mode-buttons-container {
+  width: 243px;
+  height: 38px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  display: flex;
+}
+
+.mode-button-runtime {
+  @include mode-button(108);
+}
+
+.mode-button-runtime-active {
+  @include mode-button(108);
+  background: #ffffff;
+  border: 1px solid #e2e3e5;
+}
+
+.mode-button-constructor {
+  @include mode-button(133);
+}
+
+.mode-button-constructor-active {
+  @include mode-button(133);
+  background: #ffffff;
+  border: 1px solid #e2e3e5;
+}
+
+.mode-buttons-text {
+  margin: 0 10px;
+  font-weight: 500;
+  font-size: 14px;
+}

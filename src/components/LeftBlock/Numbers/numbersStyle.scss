@@ -1,0 +1,36 @@
+@import "../../../App";
+
+.numbers-container {
+  @include constructor-block(224, space-around);
+  flex-direction: column;
+}
+
+.numbers-block {
+  @include constructor-block(48, space-around);
+}
+
+.number-button {
+  @include button(72, 48);
+}
+
+.number-button-zero {
+  @include button(152, 48);
+}
+
+.number-button-active {
+  @include button(72, 48);
+  cursor: pointer;
+
+  &:active {
+    border: solid 1px #5d5fef;
+  }
+}
+
+.number-button-zero-active {
+  @include button(152, 48);
+  cursor: pointer;
+
+  &:active {
+    border: solid 1px #5d5fef;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../App";
+
+.display-container {
+  @include constructor-block(60, center);
+}
+
+.display {
+  width: 232px;
+  height: 52px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.display-text {
+  font-weight: 800;
+  font-size: 36px;
+  margin-right: 8px;
+}
+
+.display-small-text {
+  @extend .display-text;
+  font-size: 19px;
+}
+
+.display-extra-small-text {
+  @extend .display-text;
+  font-size: 15px;
+}

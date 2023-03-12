@@ -1,0 +1,18 @@
+@import "../../../App";
+
+.maths-operators {
+  @include constructor-block(56, space-around);
+}
+
+.maths-operators-button {
+  @include button(52, 48);
+}
+
+.maths-operators-button-active {
+  @include button(52, 48);
+  cursor: pointer;
+
+  &:active {
+    border: solid 1px #5d5fef;
+  }
+}
