@@ -77,8 +77,8 @@ export const calculatorReducer = (
       return {
         ...state,
         result: result,
-        lastNumber: String(secondNum),
-        expression: String(result) + operator,
+        lastNumber: secondNum ? String(secondNum) : '',
+        expression: result !== 'Не определено' ? result + operator : '0',
       };
     }
     default:

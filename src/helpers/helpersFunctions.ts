@@ -52,7 +52,7 @@ export const formatResult = (result: string) => {
   formattingResult.replace(".", ",");
   if (formattingResult.length > 17 && formattingResult.indexOf(","))
     result = result.slice(0, 17);
-  if (formattingResult === "Infinity") formattingResult = "Не определено";
+  if (formattingResult === "Infinity" || formattingResult === 'NaN') formattingResult = "Не определено";
   return formattingResult;
 };
 
