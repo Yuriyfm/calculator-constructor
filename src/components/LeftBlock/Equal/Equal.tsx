@@ -3,7 +3,7 @@ import "./equalStyle.scss";
 import { Dispatch } from "redux";
 import { useDispatch } from "react-redux";
 import {
-  setExpression,
+  setExpression, setMode,
   setResult,
 } from "../../../store/reducers/calculatorReducer";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
@@ -15,11 +15,13 @@ const Equal: React.FC = () => {
     (state) => state.calculatorReducer.expression
   );
   const buffer = useTypedSelector((state) => state.calculatorReducer.buffer);
+  const result = useTypedSelector((state) => state.calculatorReducer.result);
   const lastNumber = useTypedSelector(
     (state) => state.calculatorReducer.lastNumber
   );
   function equalButtonHandler() {
     if (mode === "runtime") {
+      result === 'Не определено' && dispatch(setMode('runtime'))
       if (buffer) {
         dispatch(setExpression(expression + buffer));
         dispatch(setResult());

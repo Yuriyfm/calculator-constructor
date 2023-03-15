@@ -3,7 +3,7 @@ import "./App.scss";
 import Display from "./components/LeftBlock/Display/Display";
 import MathsOperators from "./components/LeftBlock/MathsOperators/MathsOperators";
 import Numbers from "./components/LeftBlock/Numbers/Numbers";
-import Equal from "./components/LeftBlock/EqualAndComma/Equal";
+import Equal from "./components/LeftBlock/Equal/Equal";
 import ModeButtons from "./components/RightBlock/ModeButtons/ModeButtons";
 import { useTypedSelector } from "./hooks/useTypedSelector";
 import { constructorElement } from "./types/constructorReducerTypes";
