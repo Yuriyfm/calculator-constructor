@@ -21,8 +21,10 @@ const Equal: React.FC = () => {
   );
   function equalButtonHandler() {
     if (mode === "runtime") {
-      result === 'Не определено' && dispatch(setMode('runtime'))
-      return
+     if (result === 'Не определено') {
+       dispatch(setMode('runtime'))
+       return
+     }
       if (buffer) {
         dispatch(setExpression(expression + buffer));
         dispatch(setResult());
