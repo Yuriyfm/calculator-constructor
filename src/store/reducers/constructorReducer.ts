@@ -22,11 +22,12 @@ export const constructorReducer = (
           rightBlockElements: [action.payload, ...state.rightBlockElements],
         };
       }
-      return {
+      if (!state.rightBlockElements.includes(action.payload)) return {
         ...state,
         rightBlockElements: [...state.rightBlockElements, action.payload],
       };
     }
+    return {...state}
     case constructorReducerActionTypes.REMOVE_ELEMENT_FROM_RIGHT_BLOCK: {
       return {
         ...state,

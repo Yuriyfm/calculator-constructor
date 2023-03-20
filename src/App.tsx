@@ -29,7 +29,7 @@ function App() {
     useState<constructorElement>(null);
 
   const constructorComponentsList = {
-    display: <Display />,
+    display: <Display/>,
     mathsOperators: <MathsOperators />,
     numbers: <Numbers />,
     equal: <Equal />,
@@ -69,6 +69,7 @@ function App() {
       event.currentTarget.style.borderTop = "none";
     }
     if (mode !== "runtime") {
+
       !rightBlockElements.includes(currentDragElement)
         ? dispatch(setElementToRightBlock(currentDragElement))
         : item && dispatch(sortElementsInRightBlock(currentDragElement, item));
